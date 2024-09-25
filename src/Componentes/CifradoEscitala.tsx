@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from 'primereact/button';
 import { InputTextarea } from 'primereact/inputtextarea';
-import { InputText } from 'primereact/inputtext';
+import { InputNumber } from 'primereact/inputnumber';
 import '../Estilos/CifradoEscitala.css';
 
 const CifradoEscitala: React.FC = () => {
@@ -97,16 +97,15 @@ const CifradoEscitala: React.FC = () => {
                 </div>
 
                 <div className="p-field">
-                    <label htmlFor="clave">Número de columnas (clave):</label><h1></h1>
-                    <InputText
-                        id="clave"
-                        value={clave.toString()}
-                        type="number"
-                        onChange={(e) => setClave(parseInt(e.target.value) || 4)} // Actualiza la clave, predeterminado a 4
-                        min={1}
-                        max={25}
-                    />
-                </div>
+                        <label htmlFor="clave">Número de columnas (clave)</label><h1></h1>
+                        <InputNumber
+                            id="clave"
+                            value={clave}
+                            onValueChange={(e) => setClave(e.value || 4)}
+                            min={1}
+                            max={25}
+                        />
+                    </div><h1></h1>
 <h1></h1>
                 <div className="button-container">
                     <Button label="Cifrar" className="p-button-primary" onClick={cifrarMensaje} />
