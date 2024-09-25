@@ -1,0 +1,98 @@
+:root {
+    --primary-color: #007ad9;       /* Azul vibrante */
+    --secondary-color: #fcba03;     /* Amarillo suave */
+    --background-color: #f4f4f9;    /* Fondo suave */
+    --text-color: #333;             /* Color de texto oscuro */
+    --muted-text-color: #666;       /* Texto apagado */
+    --card-background: #ffffff;     /* Fondo de la tarjeta */
+    --border-color: #dddddd;        /* Bordes suaves */
+}
+
+.escitala-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Ajustado a 100vh para que siempre ocupe toda la pantalla */
+    padding: 1rem; /* Agregamos padding para espacios en pantallas pequeñas */
+    background-color: var(--background-color); /* Fondo de la página */
+}
+
+.escitala-card {
+    width: 100%;
+    max-width: 600px; /* Limitar el ancho máximo a 600px */
+    background-color: var(--card-background);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-sizing: border-box; /* Garantiza que padding y borde no alteren el tamaño total */
+}
+
+.escitala-card h3 {
+    color: var(--primary-color);  /* Color del título */
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.escitala-card p {
+    font-size: 1.2rem;
+    color: var(--muted-text-color); /* Color apagado para el texto de resultado */
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--background-color); /* Fondo del texto de resultado */
+    border: 1px solid var(--border-color);    /* Borde del área de resultado */
+    border-radius: 6px;
+}
+
+.escitala-card label {
+    font-weight: bold;
+    color: var(--text-color);  /* Color del texto principal */
+}
+
+.p-button-primary {
+    background-color: var(--primary-color) !important;  /* Botón azul */
+    border-color: var(--primary-color) !important;
+}
+
+.p-button-primary:hover {
+    background-color: #005bb5 !important;  /* Botón azul más oscuro en hover */
+}
+
+.p-button-secondary {
+    background-color: var(--secondary-color) !important;  /* Botón amarillo */
+    border-color: var(--secondary-color) !important;
+}
+
+.p-button-secondary:hover {
+    background-color: #e6a600 !important;  /* Botón amarillo más oscuro en hover */
+}
+
+.p-button {
+    width: 100%;
+    max-width: 130px;
+    margin: 0.5rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Asegura que los botones se acomoden bien en pantallas pequeñas */
+}
+
+input, textarea {
+    width: 100%; /* Los inputs y textareas ocupan todo el ancho del contenedor */
+    border-radius: 6px;
+    border: 1px solid var(--border-color);  /* Bordes suaves en los inputs */
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+textarea {
+    background-color: var(--background-color); /* Fondo de área de texto */
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);  /* Foco en azul */
+}
