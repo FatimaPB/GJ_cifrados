@@ -1,13 +1,18 @@
 import React from 'react';
 import { Menubar } from 'primereact/menubar';
 import { MenuItem } from 'primereact/menuitem';
+import { Link } from 'react-router-dom';
 
 const HeaderCifrado = () => {
     const items: MenuItem[] = [
         {
             label: 'Inicio',
             icon: 'pi pi-home',
-            command: () => { window.location.href = "/" }
+            template: () => (
+                <Link to="/" className="p-menuitem-link" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <i className="pi pi-home" style={{ marginRight: '0.5rem' }}></i> Inicio
+                </Link>
+            )
         },
         {
             label: 'Cifrados',
@@ -16,20 +21,32 @@ const HeaderCifrado = () => {
                 {
                     label: 'Cifrado César',
                     icon: 'pi pi-shield',
-                    command: () => { window.location.href = "/cesar" }
+                    template: () => (
+                        <Link to="/cesar" className="p-menuitem-link" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <i className="pi pi-shield" style={{ marginRight: '0.5rem' }}></i> Cifrado César
+                        </Link>
+                    )
                 },
                 {
                     label: 'Cifrado Escítala',
                     icon: 'pi pi-key',
-                    command: () => { window.location.href = "/escitala" }
+                    template: () => (
+                        <Link to="/escitala" className="p-menuitem-link" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <i className="pi pi-key" style={{ marginRight: '0.5rem' }}></i> Cifrado Escítala
+                        </Link>
+                    )
                 }
             ]
         },
         {
             label: 'Guía',
             icon: 'pi pi-book',
-            command: () => { window.location.href = "/guia" }
-        },
+            template: () => (
+                <Link to="/guia" className="p-menuitem-link" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <i className="pi pi-book" style={{ marginRight: '0.5rem' }}></i> Guía
+                </Link>
+            )
+        }
     ];
 
     return (
