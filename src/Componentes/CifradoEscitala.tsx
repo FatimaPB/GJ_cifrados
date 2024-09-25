@@ -103,7 +103,8 @@ const CifradoEscitala: React.FC = () => {
                         value={clave.toString()}
                         type="number"
                         onChange={(e) => setClave(parseInt(e.target.value) || 4)} // Actualiza la clave, predeterminado a 4
-                        min="1"
+                        min={1}
+                        max={25}
                     />
                 </div>
 <h1></h1>
