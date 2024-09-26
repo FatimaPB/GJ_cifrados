@@ -30,6 +30,11 @@ const CifradoCesar = () => {
         setResultado(cifrar(texto, 26 - desplazamiento));
     };
 
+        // Función para copiar el resultado al portapapeles
+        const copiarResultado = () => {
+            navigator.clipboard.writeText(resultado);
+        };
+
     return (
         <div className="cesar-container">
             <Card title="Cifrado César" className="cesar-card">
@@ -43,6 +48,7 @@ const CifradoCesar = () => {
                             rows={3}
                             cols={30}
                             autoResize
+                            placeholder="Introduce el mensaje a cifrar o descifrar"
                         />
                     </div>
 
@@ -77,8 +83,9 @@ const CifradoCesar = () => {
 
                 <div className="p-col-12 p-mt-4">
                     <h3>Resultado</h3>
-                    <p>{resultado ? resultado : 'El resultado aparecerá aquí...'}</p>
+                    <p>{resultado}</p>
                 </div>
+                <Button label="Copiar Resultado" className="p-button-secondary" onClick={copiarResultado} />
             </Card>
         </div>
     );

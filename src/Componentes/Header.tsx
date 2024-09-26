@@ -3,6 +3,8 @@ import { Menubar } from 'primereact/menubar';
 import { MenuItem } from 'primereact/menuitem';
 import { Link } from 'react-router-dom';
 
+import '../Estilos/Header.css'
+
 const HeaderCifrado = () => {
     const items: MenuItem[] = [
         {
